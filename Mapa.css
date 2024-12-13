@@ -1,0 +1,350 @@
+
+
+.nav-item{
+  transition: transform 0.3s ease;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  margin-left: 85%;
+}
+.nav-item:hover{
+  transform: scale(1.2);
+}
+/*Inicio Mapa 2D*/
+
+
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.Mapa {
+  background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(18, 123, 172) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  margin: 2rem 0;
+}
+
+/* Costos */
+.Costos {
+  margin: 10px 0;
+  text-align: center;
+}
+.anuncio {
+  font-size: 1.5rem; /* Escalable */
+  color: white;
+}
+.Costos select {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Showcase */
+.showcase {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+  padding: 10px;
+}
+
+.showcase li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.showcase li small {
+  font-size: 0.9rem;
+}
+/* Contenedor Mapa */
+.container_Mapa {
+  width: max-content; /* Ocupa un 90% del ancho de la pantalla */
+  margin: 20px 0;
+  max-width: 800px; /* Limita el ancho máximo */
+  overflow-x: auto;
+  overflow-y: auto;
+  margin: 20px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Filas y espacios */
+.parking-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ajusta los elementos si no caben */
+}
+
+.Espacio {
+  width: 6vw; /* Escalable con el ancho de la pantalla */
+  height: 6vw;
+  max-width: 50px; /* Limita tamaño máximo */
+  max-height: 50px;
+  background-color: #444;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.Espacio:hover {
+  transform: scale(1.1);
+}
+
+.Espacio.motos {
+  background-color: rgb(41, 101, 255);
+}
+.Espacio.carros {
+  background-color: rgb(21, 255, 126);
+}
+.Espacio.selected {
+  background-color: rgb(95, 204, 255);
+}
+.Espacio.sold {
+  background-color: #444451;
+}
+
+/* Texto */
+p.text {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+p.text span {
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .Espacio {
+    width: 8vw;
+    height: 8vw;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .anuncio {
+    font-size: 1.2rem;
+  }
+
+  p.text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .Espacio {
+    width: 10vw;
+    height: 10vw;
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  .anuncio {
+    font-size: 1rem;
+  }
+
+  p.text {
+    font-size: 0.9rem;
+  }
+}
+/*Fin Mapa 2D*/
+
+/* Inicio Contenedor Formulario Reserva */
+
+
+.FondoPerfil{
+position: fixed;
+bottom: 0;
+left: 0;
+height: 100%;
+z-index: -1;
+}
+
+.formularioReserva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Formulario */
+.form-reserva {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(44, 108, 168, 0.2);
+  width: 100%;
+  max-width: 900px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+}
+
+.containerDigiteNombre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.form-reserva h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007BFF;
+}
+
+/* Elementos del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto; /* Centramos los campos */
+}
+
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: 0.3s;
+}
+
+.box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón */
+.submit {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  background: linear-gradient(45deg, #0056b3, #003f8c);
+  transform: scale(1.05);
+}
+
+/* Monto y Botón */
+.monto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.monto-container input,
+.monto-container .submit {
+  width: 100%;
+  max-width: 400px;
+}
+/* Estilos de las calles */
+.street {
+  background-color: #444;
+  border: 2px dashed #fff;
+}
+
+/* Calles horizontales */
+.street.horizontal {
+  grid-column: 1 / 4;
+  height: 50px;
+}
+
+/* Calles verticales */
+.street.vertical {
+  width: 50px;
+  height: 250px;
+}
+@media screen and (max-width: 900px){
+
+.FondoPerfil{
+  display: none;
+}
+
+}
+
+@media (max-width: 768px) {
+  .Espacio {
+    width: 8vw;
+    height: 8vw;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .anuncio {
+    font-size: 1.2rem;
+  }
+
+  p.text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Espacio {
+    width: 10vw;
+    height: 10vw;
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  .anuncio {
+    font-size: 1rem;
+  }
+
+  p.text {
+    font-size: 0.9rem;
+  }
+}
+/* Fin Contenedor Formulario Reserva */
